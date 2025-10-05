@@ -3,6 +3,72 @@
 import { Github, Linkedin, Twitter, MessageCircle, ArrowDownLeft } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
+// Unhashing Animation Hook
+function useUnhashingText(finalText: string, isVisible: boolean, delay: number = 0) {
+  const [displayText, setDisplayText] = useState(finalText) // Initialize with final text to prevent hydration mismatch
+  const [hasStarted, setHasStarted] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+  
+  const chars = "JKLMNOPQRSTUVWXYZabcdefghijklmn56789@._-!#$%&*"
+  
+  // Set mounted state on client
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+  
+  useEffect(() => {
+    if (!isVisible || hasStarted || !isMounted) return
+    
+    const startDelay = setTimeout(() => {
+      setHasStarted(true)
+      let currentIndex = 0
+      let iterations = 0
+      
+      const interval = setInterval(() => {
+        setDisplayText((prev) => {
+          return finalText
+            .split("")
+            .map((char, index) => {
+              // If we've already revealed this character, keep it
+              if (index < currentIndex) {
+                return finalText[index]
+              }
+              
+              // If we're currently working on this character
+              if (index === currentIndex) {
+                // After some iterations, reveal the actual character
+                if (iterations > 4) {
+                  currentIndex++
+                  iterations = 0
+                  return char
+                }
+                // Otherwise show random character
+                return chars[Math.floor(Math.random() * chars.length)]
+              }
+              
+              // Future characters remain random
+              return chars[Math.floor(Math.random() * chars.length)]
+            })
+            .join("")
+        })
+        
+        iterations++
+        
+        // Once we've revealed all characters, stop
+        if (currentIndex >= finalText.length) {
+          clearInterval(interval)
+        }
+      }, 30) // Speed of the animation
+      
+      return () => clearInterval(interval)
+    }, delay)
+    
+    return () => clearTimeout(startDelay)
+  }, [isVisible, finalText, delay, hasStarted, isMounted, chars])
+  
+  return displayText
+}
+
 export function ContactSection() {
   const gmailAddress = "timioguns16@gmail.com" 
   const socialLinks = {
@@ -14,6 +80,9 @@ export function ContactSection() {
 
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
+  
+  // Use the unhashing animation for the email
+  const displayEmail = useUnhashingText(gmailAddress, isVisible, 600)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -99,15 +168,21 @@ export function ContactSection() {
               className={`flex flex-col justify-end lg:-ml-20 mt-8 lg:mt-8 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
               }`}
-              style={{ transitionDelay: '600ms' }}
+              style={{ transitionDelay: '70ms' }}
             >
               <a 
                 href={`mailto:${gmailAddress}`}
                 className="group inline-block"
               >
-                <p className="text-4xl sm:text-5xl lg:text-[65px] text-gray-400 hover:text-white transition-all duration-300 tracking-tight"
-                   style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 300, letterSpacing: '0.05em' }}>
-                  {gmailAddress}
+                <p className="text-4xl sm:text-5xl lg:text-[65px] text-gray-400 hover:text-white transition-all duration-300 font-mono whitespace-nowrap overflow-hidden"
+                   style={{ 
+                     fontFamily: "'JetBrains Mono', 'Courier New', monospace", 
+                     fontWeight: 400, 
+                     letterSpacing: '0.02em',
+                     minWidth: 'fit-content',
+                     width: '100%'
+                   }}>
+                  {displayEmail}
                 </p>
                 <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left mt-2"></div>
               </a>

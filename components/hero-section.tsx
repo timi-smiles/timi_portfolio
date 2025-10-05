@@ -34,7 +34,7 @@ export function HeroSection() {
 
             <ScrollAnimation animation="fade-right" delay={600} duration={700}>
             <p className="text-lg text-muted-foreground max-w-2xl text-pretty">
-              I’m a full-stack developer who builds efficient, functional and scalable web applications using React Next.js, and TypeScript, focusing on clean code and practical solutions.
+              I’m a full-stack developer who builds efficient, functional and scalable web applications using React, Next.js, and Django amongst others, focusing on clean code and practical solutions.
             </p>
             </ScrollAnimation>
 

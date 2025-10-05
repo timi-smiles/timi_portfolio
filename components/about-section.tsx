@@ -40,7 +40,7 @@ export function AboutSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <ScrollAnimation animation="fade-up" duration={800}>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-left">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-left" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}>
               <span className="text-blue-400">Building</span>
               <span className="text-white">, </span>
               <span className="text-purple-400">Breaking</span>
@@ -52,13 +52,13 @@ export function AboutSection() {
           
           <div className="breathing-container prose prose-lg dark:prose-invert mx-auto bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 transition-all duration-500">
             <ScrollAnimation animation="fade-right" delay={200} duration={800}>
-              <p className="text-xl text-gray-400 leading-relaxed text-pretty">
+              <p className="text-xl text-gray-400 leading-relaxed text-pretty" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
                 I'm driven by a passion for creating scalable, high performing web applications that deliver measurable impact. I've built applications using Next.js, React, Node.js, and Django amongst others where i ensure smooth functionality, and exceptional user experience.
               </p>
             </ScrollAnimation>
             
             <ScrollAnimation animation="fade-left" delay={400} duration={800}>
-              <p className="text-xl text-gray-400 leading-relaxed mt-6 text-pretty">
+              <p className="text-xl text-gray-400 leading-relaxed mt-6 text-pretty" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
                 I thrive on solving technical challenges and transforming ideas into seamless, production-ready products. Whether optimizing system architectures, implementing innovative features, or collaborating across teams, I bring precision, creativity, and a commitment to technical excellence in every project.
               </p>
             </ScrollAnimation>
@@ -67,7 +67,7 @@ export function AboutSection() {
           {/* Skills Section */}
           <div className="mt-20">
             <ScrollAnimation animation="fade-up" delay={600} duration={800}>
-              <h3 className="text-5xl sm:text-6xl font-normal mb-10 text-center">
+              <h3 className="text-5xl sm:text-6xl font-normal mb-10 text-center" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
                 <span className="text-white">My </span>
                 <span className="text-blue-400">Tech Stack</span>
               </h3>
@@ -91,7 +91,7 @@ export function AboutSection() {
                             className="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300" 
                           />
                         </div>
-                        <span className="font-medium text-base text-gray-300 text-center group-hover:text-blue-400 transition-colors duration-300">
+                        <span className="font-medium text-base text-gray-300 text-center group-hover:text-blue-400 transition-colors duration-300" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
                           {skill.name}
                         </span>
                       </div>
