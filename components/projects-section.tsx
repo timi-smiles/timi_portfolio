@@ -6,7 +6,7 @@ const projects = [
     title: "MediCheck",
     description: "AI-powered drug verification and tracking platform that helps users instantly identify counterfeit or expired drugs using blockchain-backed data validation.",
     image: "/PROJECTS/medicheck.png",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Hedera", "AI/ML"],
+    technologies: ["Next.js", "TypeScript", "Hedera Consensus Service", "AI/ML"],
     impact: "Reduced risk of counterfeit drug consumption by enabling real-time verification",
     github: "https://github.com/Derojuu/MediCheck",
     demo: "https://app-medicheck.vercel.app/",
@@ -60,9 +60,9 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-26 bg-secondary/30">
+    <section id="projects" className="pt-16 pb-26 md:py-26 bg-secondary/30">
       <div className="container mx-auto px-6 sm:px-8 lg:px-16">
-        <ScrollAnimation animation="fade-up" duration={800}>
+        <ScrollAnimation animation="slide-up" delay={100} duration={1000}>
           <h2 className="text-4xl sm:text-4xl lg:text-5xl font-medium mb-12 text-center tracking-wide">
             <span className="text-white">Selected </span>
             <span className="text-blue-400">Projects</span>

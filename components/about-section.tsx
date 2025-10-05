@@ -23,7 +23,7 @@ const allSkills = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-16 md:py-24">
       <style jsx>{`
         @keyframes breathing {
           0%, 100% {
@@ -39,8 +39,8 @@ export function AboutSection() {
       `}</style>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <ScrollAnimation animation="fade-up" duration={800}>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-left" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}>
+          <ScrollAnimation animation="slide-up" delay={100} duration={1000}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-left" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}>
               <span className="text-blue-400">Building</span>
               <span className="text-white">, </span>
               <span className="text-purple-400">Breaking</span>
@@ -50,48 +50,48 @@ export function AboutSection() {
             </h2>
           </ScrollAnimation>
           
-          <div className="breathing-container prose prose-lg dark:prose-invert mx-auto bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 transition-all duration-500">
+          <div className="breathing-container prose prose-lg dark:prose-invert mx-auto bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-5 sm:p-6 md:p-8 transition-all duration-500">
             <ScrollAnimation animation="fade-right" delay={200} duration={800}>
-              <p className="text-xl text-gray-400 leading-relaxed text-pretty" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed text-pretty mb-4 sm:mb-5" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
                 I'm driven by a passion for creating scalable, high performing web applications that deliver measurable impact. I've built applications using Next.js, React, Node.js, and Django amongst others where i ensure smooth functionality, and exceptional user experience.
               </p>
             </ScrollAnimation>
             
             <ScrollAnimation animation="fade-left" delay={400} duration={800}>
-              <p className="text-xl text-gray-400 leading-relaxed mt-6 text-pretty" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed text-pretty" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
                 I thrive on solving technical challenges and transforming ideas into seamless, production-ready products. Whether optimizing system architectures, implementing innovative features, or collaborating across teams, I bring precision, creativity, and a commitment to technical excellence in every project.
               </p>
             </ScrollAnimation>
           </div>
           
           {/* Skills Section */}
-          <div className="mt-20">
-            <ScrollAnimation animation="fade-up" delay={600} duration={800}>
-              <h3 className="text-5xl sm:text-6xl font-normal mb-10 text-center" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
+          <div className="mt-12 md:mt-20">
+            <ScrollAnimation animation="slide-up" delay={100} duration={1000}>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-medium mb-8 md:mb-10 text-center tracking-wide" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 <span className="text-white">My </span>
                 <span className="text-blue-400">Tech Stack</span>
               </h3>
             </ScrollAnimation>
             
             <ScrollAnimation animation="fade-up" delay={800} duration={800}>
-              <Card className="p-10 sm:p-14 bg-card/50 backdrop-blur-sm border-2 border-blue-400/20 hover:border-blue-400/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(59,130,246,0.2)] rounded-3xl">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 sm:gap-10">
+              <Card className="p-6 sm:p-8 md:p-10 lg:p-14 bg-card/50 backdrop-blur-sm border-2 border-blue-400/20 hover:border-blue-400/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(59,130,246,0.2)] rounded-3xl">
+                <div className="grid grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
                   {allSkills.map((skill, index) => (
                     <ScrollAnimation
                       key={skill.name}
                       animation="slide-up"
-                      delay={1000 + index * 80}
-                      duration={600}
+                      delay={900 + index * 40}
+                      duration={500}
                     >
-                      <div className="flex flex-col items-center gap-4 p-5 rounded-xl hover:bg-blue-400/10 transition-all duration-300 group hover:scale-110 cursor-pointer">
-                        <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4 p-3 sm:p-4 md:p-5 rounded-xl hover:bg-blue-400/10 transition-all duration-300 group hover:scale-110 cursor-pointer">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <img 
                             src={skill.logo} 
                             alt={skill.name} 
                             className="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300" 
                           />
                         </div>
-                        <span className="font-medium text-base text-gray-300 text-center group-hover:text-blue-400 transition-colors duration-300" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
+                        <span className="font-medium text-xs sm:text-sm md:text-base text-gray-300 text-center group-hover:text-blue-400 transition-colors duration-300" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 300 }}>
                           {skill.name}
                         </span>
                       </div>

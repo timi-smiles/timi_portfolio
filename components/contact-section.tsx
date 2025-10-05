@@ -114,16 +114,16 @@ export function ContactSection() {
             
             {/* Top Left - Say Hello Section */}
             <div 
-              className={`flex flex-col justify-start space-y-4 lg:-ml-20 transition-all duration-1000 ${
+              className={`flex flex-col justify-start space-y-3 lg:space-y-4 lg:-ml-20 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: '100ms' }}
             >
-              <h2 className="text-4xl sm:text-5xl lg:text-[75px] font-light text-white tracking-tight"
+              <h2 className="text-3xl sm:text-4xl lg:text-[75px] font-light text-white tracking-tight"
                   style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 300, letterSpacing: '0.02em' }}>
                 Say Hello
               </h2>
-              <p className="text-gray-400 text-lg sm:text-xl lg:text-3xl max-w-none leading-relaxed whitespace-nowrap"
+              <p className="text-gray-400 text-sm sm:text-base lg:text-3xl max-w-xs sm:max-w-md lg:max-w-none leading-relaxed lg:whitespace-nowrap"
                  style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 300 }}>
                 Ready to bring your projects to life? Let's work together
               </p>
@@ -131,14 +131,14 @@ export function ContactSection() {
 
             {/* Top Right - Large Arrow */}
             <div 
-              className={`flex items-start justify-center lg:justify-end lg:-mr-18 lg:-mt-15 transition-all duration-1000 ${
+              className={`absolute top-0 right-4 lg:relative lg:top-auto lg:right-auto flex items-start justify-end lg:-mr-18 lg:-mt-15 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-12 rotate-45'
               }`}
               style={{ transitionDelay: '200ms' }}
             >
               <div className="relative group">
                 <ArrowDownLeft 
-                  className="w-20 h-80 sm:w-32 sm:h-32 lg:w-40 lg:h-40 text-gray-600 animate-pulse transition-transform duration-500 group-hover:-rotate-[30deg]" 
+                  className="w-16 h-16 sm:w-20 sm:h-20 lg:w-40 lg:h-40 text-gray-600/50 lg:text-gray-600 animate-pulse transition-transform duration-500 group-hover:-rotate-[30deg]" 
                   strokeWidth={1.5}
                 />
               </div>
@@ -146,15 +146,15 @@ export function ContactSection() {
 
             {/* Center - Availability Card */}
             <div 
-              className={`lg:col-span-2 flex justify-center items-center my-8 lg:my-4 transition-all duration-1000 ${
+              className={`lg:col-span-2 flex justify-start lg:justify-center items-center my-6 lg:my-4 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
               }`}
               style={{ transitionDelay: '400ms' }}
             >
-              <div className="relative group">
+              <div className="relative group w-full lg:w-auto">
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                <div className="relative px-8 py-6 bg-background/95 backdrop-blur-sm rounded-2xl border-2 border-gray-800 hover:border-gray-700 transition-all duration-300">
-                  <p className="text-gray-400 text-center text-base sm:text-lg lg:text-xl leading-relaxed"
+                <div className="relative px-6 py-5 lg:px-8 lg:py-6 bg-background/95 backdrop-blur-sm rounded-2xl border-2 border-gray-800 hover:border-gray-700 transition-all duration-300">
+                  <p className="text-gray-300 text-left lg:text-center text-sm sm:text-base lg:text-xl leading-relaxed"
                      style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 300, letterSpacing: '0.03em' }}>
                     Open to freelance opportunities and full-time positions.<br />
                     Let's build something amazing together!
@@ -165,7 +165,7 @@ export function ContactSection() {
 
             {/* Bottom Left - Email */}
             <div 
-              className={`flex flex-col justify-end lg:-ml-20 mt-8 lg:mt-8 transition-all duration-1000 ${
+              className={`flex flex-col justify-end lg:-ml-20 mt-4 lg:mt-8 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
               }`}
               style={{ transitionDelay: '70ms' }}
@@ -174,7 +174,7 @@ export function ContactSection() {
                 href={`mailto:${gmailAddress}`}
                 className="group inline-block"
               >
-                <p className="text-4xl sm:text-5xl lg:text-[65px] text-gray-400 hover:text-white transition-all duration-300 font-mono whitespace-nowrap overflow-hidden"
+                <p className="text-2xl sm:text-3xl lg:text-[65px] text-gray-400 hover:text-white transition-all duration-300 font-mono break-all lg:whitespace-nowrap lg:overflow-hidden"
                    style={{ 
                      fontFamily: "'JetBrains Mono', 'Courier New', monospace", 
                      fontWeight: 400, 
@@ -184,18 +184,18 @@ export function ContactSection() {
                    }}>
                   {displayEmail}
                 </p>
-                <div className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left mt-2"></div>
+                <div className="h-0.5 lg:h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left mt-2"></div>
               </a>
             </div>
 
             {/* Bottom Right - Social Icons */}
             <div 
-              className={`flex flex-col justify-end lg:-mr-18 mt-8 lg:mt-7 transition-all duration-1000 ${
+              className={`flex flex-col justify-end lg:-mr-18 mt-2 lg:mt-7 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
               }`}
               style={{ transitionDelay: '700ms' }}
             >
-              <div className="flex items-center justify-end gap-6 lg:gap-8">
+              <div className="flex items-center justify-start lg:justify-end gap-5 lg:gap-6 lg:gap-8">
                 <a
                   href={socialLinks.twitter}
                   target="_blank"
@@ -204,7 +204,7 @@ export function ContactSection() {
                   aria-label="X (Twitter)"
                 >
                   <div className="absolute -inset-2 bg-blue-500/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                  <Twitter className="relative w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 text-gray-400 hover:text-blue-400 transition-all duration-300 group-hover:scale-110" strokeWidth={2} />
+                  <Twitter className="relative w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-400 hover:text-blue-400 transition-all duration-300 group-hover:scale-110" strokeWidth={2} />
                 </a>
                 
                 <a
@@ -216,7 +216,7 @@ export function ContactSection() {
                 >
                   <div className="absolute -inset-2 bg-green-500/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
                   <svg 
-                    className="relative w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 text-gray-400 group-hover:text-green-400 transition-all duration-300 group-hover:scale-110"
+                    className="relative w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-400 group-hover:text-green-400 transition-all duration-300 group-hover:scale-110"
                     viewBox="0 0 24 24" 
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +233,7 @@ export function ContactSection() {
                   aria-label="GitHub"
                 >
                   <div className="absolute -inset-2 bg-purple-500/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                  <Github className="relative w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 text-gray-400 hover:text-purple-400 transition-all duration-300 group-hover:scale-110" />
+                  <Github className="relative w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-400 hover:text-purple-400 transition-all duration-300 group-hover:scale-110" />
                 </a>
                 
                 <a
@@ -244,7 +244,7 @@ export function ContactSection() {
                   aria-label="LinkedIn"
                 >
                   <div className="absolute -inset-2 bg-cyan-500/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                  <Linkedin className="relative w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 text-gray-400 hover:text-cyan-400 transition-all duration-300 group-hover:scale-110" />
+                  <Linkedin className="relative w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-gray-400 hover:text-cyan-400 transition-all duration-300 group-hover:scale-110" />
                 </a>
               </div>
             </div>
