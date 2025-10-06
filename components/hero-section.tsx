@@ -85,7 +85,7 @@ export function HeroSection() {
                   style={{ borderRadius: '60% 40% 60% 40%' }}
                 >
                   <img
-                    src="/timi.jpg"
+                    src="/Timi.jpg"
                     alt="Professional Photo"
                     className="w-full h-full object-cover"
                   />
