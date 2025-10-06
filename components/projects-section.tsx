@@ -8,7 +8,7 @@ const projects = [
     image: "/PROJECTS/medicheck.png",
     technologies: ["Next.js", "TypeScript", "Hedera Consensus Service", "AI/ML"],
     impact: "Reduced risk of counterfeit drug consumption by enabling real-time verification",
-    github: "https://github.com/Derojuu/MediCheck",
+    github: "https://github.com/timi-smiles/MediCheck",
     demo: "https://app-medicheck.vercel.app/",
   },
   {
