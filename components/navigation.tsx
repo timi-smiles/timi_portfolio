@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ArrowUp } from "lucide-react"
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("home")
@@ -18,8 +18,14 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "experience", "projects", "skills", "contact"]
-      const scrollPosition = window.scrollY + 100
+      const sections = ["home", "projects", "about", "contact"]
+      const scrollPosition = window.scrollY + window.innerHeight / 2
+
+      // Check if we're at the bottom of the page (contact section)
+      if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100) {
+        setActiveSection("contact")
+        return
+      }
 
       for (const section of sections) {
         const element = document.getElementById(section)
@@ -34,6 +40,7 @@ export function Navigation() {
     }
 
     window.addEventListener("scroll", handleScroll)
+    handleScroll() // Run on mount to set initial state
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -179,6 +186,33 @@ export function Navigation() {
               {item.label}
             </a>
           ))}
+          
+          {/* Back to Top Button */}
+          <button
+            onClick={(e) => {
+              e.preventDefault()
+              const element = document.getElementById("home")
+              if (element) {
+                element.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                })
+              }
+              setIsMobileMenuOpen(false)
+            }}
+            className={`w-full max-w-md mt-6 px-8 py-5 rounded-2xl text-xl font-medium transition-all duration-500 ease-out text-left flex items-center gap-3 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] hover:scale-105 ${
+              isMobileMenuOpen 
+                ? 'translate-x-0 opacity-100' 
+                : '-translate-x-full opacity-0'
+            }`}
+            style={{
+              transitionDelay: isMobileMenuOpen ? `${navItems.length * 100 + 200}ms` : '0ms',
+              transitionTimingFunction: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+            }}
+          >
+            <ArrowUp className="w-6 h-6 animate-bounce" />
+            Back to Top
+          </button>
         </div>
       </div>
     </>
