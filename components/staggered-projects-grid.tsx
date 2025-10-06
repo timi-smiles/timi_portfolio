@@ -10,8 +10,8 @@ interface Project {
   image: string
   technologies: string[]
   impact: string
-  github: string
-  demo: string
+  github?: string
+  demo?: string
 }
 
 interface StaggeredProjectsGridProps {
