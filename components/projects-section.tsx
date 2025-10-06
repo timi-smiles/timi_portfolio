@@ -12,7 +12,7 @@ const projects = [
     demo: "https://app-medicheck.vercel.app/",
   },
   {
-    title: "LASU Hostel Complaint Management",
+    title: "LASU Hostel Complaint Management System",
     description: "LASU Hostel Complaint Management System streamlines issue reporting, resolution, and tracking for Lagos State University hostels using Next.js and PostgreSQL.",
     image: "/PROJECTS/hostel-management-app.png",
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS"],
