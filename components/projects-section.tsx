@@ -23,7 +23,7 @@ const projects = [
   {
   title: "Leadway Pensure Kiosk Application",
   description: "An interactive self-service kiosk application developed during my internship at Leadway Pensure to enhance customer onboarding and pension service accessibility, built using React.js for the frontend and C# (.NET) for the backend.",
-  image: "/projects/leadway.png",
+  image: "/PROJECTS/leadway.png",
   technologies: ["React.js", "C#", ".NET", "SOAP API"],
   impact: "Improved client engagement and streamlined pension account access through an intuitive, touch-friendly interface.",
   demo: "https://leadway-pensure.com/services/",
@@ -31,7 +31,7 @@ const projects = [
   {
   title: "Health Advice Expert System (Chatbot)",
   description: "Intelligent chatbot built with PHP and a trained machine learning model to provide users with personalized health advice and symptom-based recommendations through an interactive interface.",
-  image: "/projects/chatbot.png",
+  image: "/PROJECTS/chatbot.png",
   technologies: ["PHP", "Machine Learning", "AI"],
   impact: "Improved access to basic healthcare information by offering quick, data-driven advice and reducing dependence on physical consultations for minor health concerns.",
   github: "https://github.com/timi-smiles/Health-Advice-Expert-System",
@@ -39,7 +39,7 @@ const projects = [
   {
   title: "Country Search App",
   description: "Interactive web application that allows users to search and explore detailed information about countries worldwide using REST Countries API.",
-  image: "/projects/Country-App.png",
+  image: "/PROJECTS/Country-App.png",
   technologies: ["TypeScript", "RestAPI", "Tailwind CSS"],
   impact: "Enhanced user experience in global data exploration through a clean, responsive interface and fast country lookup.",
   github: "https://github.com/timi-smiles/CountriesSearchApp",
@@ -48,7 +48,7 @@ const projects = [
 {
   title: "Personal Portfolio",
   description: "A portfolio site showcasing my skills, projects, and journey in my early years of web development.",
-  image: "/projects/portfolio.png",
+  image: "/PROJECTS/portfolio.png",
   technologies: ["JavaScript", "HTML", "CSS"],
   impact: "Enhanced my personal brand and made it easy for prospective employers or collaborators to explore my work and reach out.",
   github: "https://github.com/timi-smiles/My-Portfolio", 
