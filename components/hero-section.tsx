@@ -15,10 +15,10 @@ export function HeroSection() {
             <div className="space-y-4">
               <ScrollAnimation animation="slide-up" delay={100} duration={1000}>
                 <div className="space-y-2">
-                  <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold text-balance bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent animate-pulse text-left">
+                  <h1 className="text-3xl sm:text-6xl lg:text-8xl font-bold text-balance bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent animate-pulse text-left">
                     Hello there, I'm
                   </h1>
-                  <div className="text-4xl sm:text-6xl lg:text-8xl font-bold text-balance relative h-[1.2em]">
+                  <div className="text-3xl sm:text-6xl lg:text-8xl font-bold text-balance relative h-[1.2em]">
                     <TypewritingText 
                       texts={["a FullStack Dev.", "Timilehin Ogunnowo"]}
                       className="bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent"

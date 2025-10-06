@@ -7,9 +7,13 @@ import "./globals.css"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "Full-Stack Developer Portfolio",
-  description: "Portfolio of a Full-Stack Developer specializing in Next.js, Django, and Cloud technologies",
+  title: "Timilehin Ogunnowo | Full-Stack Developer",
+  description: "Timilehin Ogunnowo Portfolio. Explore projects, skills, and contact information.",
   generator: "v0.app",
+  icons: {
+    icon: '/Timi.jpg',
+    apple: '/Timi.jpg',
+  },
 }
 
 export default function RootLayout({
