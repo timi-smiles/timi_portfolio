@@ -131,7 +131,7 @@ export function ContactSection() {
 
             {/* Top Right - Large Arrow */}
             <div 
-              className={`absolute top-0 right-4 lg:relative lg:top-auto lg:right-auto flex items-start justify-end lg:-mr-18 lg:-mt-15 transition-all duration-1000 ${
+              className={`absolute top-0 right-1 lg:relative lg:top-auto lg:right-auto flex items-start justify-end lg:-mr-18 lg:-mt-15 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-12 rotate-45'
               }`}
               style={{ transitionDelay: '200ms' }}
@@ -190,7 +190,7 @@ export function ContactSection() {
 
             {/* Bottom Right - Social Icons */}
             <div 
-              className={`flex flex-col justify-end lg:-mr-18 mt-2 lg:mt-7 transition-all duration-1000 ${
+              className={`flex flex-col justify-end lg:-mr-18 mt-0.5 lg:mt-8 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
               }`}
               style={{ transitionDelay: '700ms' }}
