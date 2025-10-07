@@ -37,6 +37,15 @@ const projects = [
   github: "https://github.com/timi-smiles/Health-Advice-Expert-System",
   },
   {
+  title: "Yoruba Traditional Wedding Website",
+  description: "A beautifully crafted Yoruba traditional wedding website designed to celebrate love, culture, and unity. The site invites guests to the wedding, shares the couple’s love story, and showcases memorable moments with elegant visuals.",
+  image: "/PROJECTS/image.png",
+  technologies: ["Next.js", "Tailwind CSS"],
+  impact: "Created a culturally rich, responsive, and user-intuitive wedding website that enhanced guest engagement through RSVP functionality and storytelling visuals, blending tradition with modern design.",
+  github: "https://github.com/timi-smiles/trad_wedding",
+  demo: "https://ayokunle25.vercel.app/",
+},
+  {
   title: "Country Search App",
   description: "Interactive web application that allows users to search and explore detailed information about countries worldwide using REST Countries API.",
   image: "/PROJECTS/Country-App.png",
