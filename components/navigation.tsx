@@ -67,7 +67,7 @@ export function Navigation() {
   const handleResumeDownload = () => {
     // Create a temporary link to trigger download
     const link = document.createElement('a')
-    link.href = '/TIMILEHIN_RESUME.pdf' 
+    link.href = '/TIMILEHIN_OGUNS_RESUME.pdf' 
     link.download = 'Timilehin_Ogunnowo_Resume.pdf'
     document.body.appendChild(link)
     link.click()
