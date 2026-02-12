@@ -10,7 +10,7 @@ const experiences = [
     company: "SHOPPAY",
     role: "Fullstack Mobile Engineer",
     location: "Remote",
-    period: "Dec 2024 - Present",
+    period: "Dec 2025 - Present",
     description: "Building secure escrow-based e-commerce marketplace with Node.js, Express, MongoDB, and React Native",
     tech: ["Node.js", "Express", "MongoDB", "React Native"],
     color: "from-blue-500 to-cyan-500"
@@ -19,7 +19,7 @@ const experiences = [
     company: "STUDIO DORESH",
     role: "Backend Developer",
     location: "Remote",
-    period: "Oct 2024 – Jan 2025",
+    period: "Oct 2025 – Jan 2026",
     description: "Engineered financial intelligence platform using Python, FastAPI, PostgreSQL, and ML processing pipelines",
     tech: ["Python", "FastAPI", "PostgreSQL", "Celery"],
     color: "from-purple-500 to-pink-500"
@@ -28,7 +28,7 @@ const experiences = [
     company: "LEADWAY PENSURE PFA",
     role: "Software Engineer",
     location: "Lagos, Nigeria",
-    period: "Jun 2024 - Oct 2024",
+    period: "May 2024 - Nov 2024",
     description: "Enhanced enterprise pension management applications using React.js, C#, and .NET Framework",
     tech: ["React.js", "C#", ".NET"],
     color: "from-orange-500 to-red-500"
