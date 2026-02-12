@@ -47,7 +47,9 @@ export function AnimatedProjectCard({ project, index }: ProjectCardProps) {
         }}
       >
         {/* Enhanced Image Container */}
-        <div className="relative overflow-hidden aspect-video p-6 flex items-center justify-center">
+        <div className={`relative overflow-hidden aspect-video flex items-center justify-center ${
+          project.title === "ShopPay" ? "p-3" : "p-6"
+        }`}>
           <div 
             className="w-full h-full rounded-xl overflow-hidden"
             style={{ 
@@ -58,7 +60,9 @@ export function AnimatedProjectCard({ project, index }: ProjectCardProps) {
             <img
               src={project.image || "/placeholder.svg"}
               alt={project.title}
-              className={`object-cover w-full h-full transition-all duration-700 rounded-xl ${
+              className={`${
+                project.title === "ShopPay" ? "object-contain" : "object-cover"
+              } w-full h-full transition-all duration-700 rounded-xl ${
                 isHovered ? "scale-110 rotate-2" : "scale-100 rotate-0"
               }`}
             />

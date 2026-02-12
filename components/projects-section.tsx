@@ -2,7 +2,23 @@ import { ScrollAnimation } from "./scroll-animation"
 import { StaggeredProjectsGrid } from "./staggered-projects-grid"
 
 const projects = [
-    {
+  {
+    title: "ShopPay",
+    description: "A secure Nigerian e-commerce and escrow-based payments mobile application enabling seamless product discovery, verified sellers, and protected transactions.",
+    image: "/PROJECTS/shoppay.png",
+    technologies: ["React Native", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+    impact: "Built and deployed a production-ready mobile marketplace with escrow payment protection and a custom backend API, published live on Google Play with active users.",
+    demo: "https://play.google.com/store/apps/details?id=com.shopbay.ShopPay",
+  },
+  {
+    title: "African Energy Research (AER)",
+    description: "A modern institutional research platform built for African Energy Research to publish energy insights, policy briefs, and research content across Africa.",
+    image: "/PROJECTS/aer.png",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Responsive UI Design", "Vercel"],
+    impact: "Delivered an enterprise grade production-ready digital presence that strengthens research visibility and institutional credibility while ensuring fast, responsive user experience.",
+    demo: "https://africanenergyresearch.org/",
+  },   
+  {
     title: "MediCheck",
     description: "AI-powered drug verification and tracking platform that helps users instantly identify counterfeit or expired drugs using blockchain-backed data validation.",
     image: "/PROJECTS/medicheck.png",
@@ -11,6 +27,7 @@ const projects = [
     github: "https://github.com/timi-smiles/MediCheck",
     demo: "https://app-medicheck.vercel.app/",
   },
+
   {
     title: "LASU Hostel Complaint Management System",
     description: "LASU Hostel Complaint Management System streamlines issue reporting, resolution, and tracking for Lagos State University hostels using Next.js and PostgreSQL.",
@@ -45,15 +62,6 @@ const projects = [
   demo: "https://infernomedia.vercel.app/",
   github: "https://github.com/timi-smiles/inferno",
   },
-  {
-  title: "Yoruba Traditional Wedding Website",
-  description: "A beautifully crafted Yoruba traditional wedding website designed to celebrate love, culture, and unity. The site invites guests to the wedding, shares the couple’s love story, and showcases memorable moments with elegant visuals.",
-  image: "/PROJECTS/image.png",
-  technologies: ["Next.js", "Tailwind CSS"],
-  impact: "Created a culturally rich, responsive, and user-intuitive wedding website that enhanced guest engagement through RSVP functionality and storytelling visuals, blending tradition with modern design.",
-  github: "https://github.com/timi-smiles/trad_wedding",
-  demo: "https://ayoade25.vercel.app/",
-},
 {
   title: "Personal Portfolio",
   description: "A portfolio site showcasing my skills, projects, and journey in my early years of web development.",

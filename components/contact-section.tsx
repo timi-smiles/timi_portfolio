@@ -107,14 +107,14 @@ export function ContactSection() {
 
   return (
     <section ref={sectionRef} id="contact" className="py-12 sm:py-16 bg-secondary/30 flex items-center overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24">
+        <div className="max-w-6xl mx-auto relative">
           {/* Main Grid Container */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
             
             {/* Top Left - Say Hello Section */}
             <div 
-              className={`flex flex-col justify-start space-y-3 lg:space-y-4 lg:-ml-20 transition-all duration-1000 ${
+              className={`flex flex-col justify-start space-y-3 lg:space-y-4 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: '100ms' }}
@@ -131,7 +131,7 @@ export function ContactSection() {
 
             {/* Top Right - Large Arrow */}
             <div 
-              className={`absolute top-0 right-1 lg:relative lg:top-auto lg:right-auto flex items-start justify-end lg:-mr-18 lg:-mt-15 transition-all duration-1000 ${
+              className={`absolute top-0 right-1 lg:relative lg:top-auto lg:right-auto flex items-start justify-end transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-12 rotate-45'
               }`}
               style={{ transitionDelay: '200ms' }}
@@ -165,7 +165,7 @@ export function ContactSection() {
 
             {/* Bottom Left - Email */}
             <div 
-              className={`flex flex-col justify-end lg:-ml-20 mt-4 lg:mt-8 transition-all duration-1000 ${
+              className={`flex flex-col justify-end mt-4 lg:mt-8 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
               }`}
               style={{ transitionDelay: '70ms' }}
@@ -174,7 +174,7 @@ export function ContactSection() {
                 href={`mailto:${gmailAddress}`}
                 className="group inline-block"
               >
-                <p className="text-2xl sm:text-3xl lg:text-[65px] text-gray-400 hover:text-white transition-all duration-300 font-mono break-all lg:whitespace-nowrap lg:overflow-hidden"
+                <p className="text-2xl sm:text-3xl lg:text-[45px] text-gray-400 hover:text-white transition-all duration-300 font-mono break-all lg:whitespace-nowrap lg:overflow-hidden"
                    style={{ 
                      fontFamily: "'JetBrains Mono', 'Courier New', monospace", 
                      fontWeight: 400, 
@@ -190,7 +190,7 @@ export function ContactSection() {
 
             {/* Bottom Right - Social Icons */}
             <div 
-              className={`flex flex-col justify-end lg:-mr-18 mt-0.5 lg:mt-8 transition-all duration-1000 ${
+              className={`flex flex-col justify-end mt-0.5 lg:mt-8 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
               }`}
               style={{ transitionDelay: '700ms' }}

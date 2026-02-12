@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail, Twitter, MessageCircle } from "lucide-react"
+import { Github, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { TypewritingText } from "./typewriting-text"
 import { ScrollAnimation } from "./scroll-animation"
@@ -12,29 +12,30 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
           <div className="flex-1 space-y-6 text-center lg:text-left">
-            <div className="space-y-4">
+            <div className="space-y-3">
               <ScrollAnimation animation="slide-up" delay={100} duration={1000}>
-                <div className="space-y-2">
-                  <h1 className="text-3xl sm:text-6xl lg:text-8xl font-bold text-balance bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent animate-pulse text-left">
-                    Hello there, I'm
-                  </h1>
-                  <div className="text-3xl sm:text-6xl lg:text-8xl font-bold text-balance relative h-[1.2em]">
+                <div className="space-y-1">
+                  <p className="text-2xl sm:text-3xl lg:text-4xl text-gray-400 font-medium">
+                    Hi, I'm
+                  </p>
+                  <div className="relative text-3xl sm:text-5xl lg:text-6xl font-bold h-[1.5em]">
                     <TypewritingText 
-                      texts={["a FullStack Dev.", "Timilehin Ogunnowo"]}
-                      className="bg-gradient-to-r from-primary via-blue-500 to-purple-600 bg-clip-text text-transparent"
+                      texts={["Timilehin Ogunnowo", "a FullStack Developer"]}
+                      className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent"
                     />
                   </div>
                 </div>
               </ScrollAnimation>
               
               <ScrollAnimation animation="fade-right" delay={300} duration={800}>
-              <p className="text-base sm:text-xl lg:text-2xl text-muted-foreground text-balance">Next.js • TypeScript • Python/Django</p>
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">Next.js • TypeScript • Python/Django • React Native</p>
               </ScrollAnimation>
             </div>
 
+            {/* Only show on desktop */}
             <ScrollAnimation animation="fade-up" delay={500} duration={900}>
-            <p className="text-lg text-muted-foreground max-w-2xl text-pretty">
-              I’m a full-stack developer who builds efficient, functional and scalable web applications using React, Next.js, and Django amongst others, focusing on clean code and practical solutions.
+            <p className="hidden lg:block text-lg text-muted-foreground max-w-2xl leading-relaxed">
+              Full-Stack Engineer with expertise in architecting secure payment infrastructures, ML-powered processing pipelines, and scalable REST API ecosystems. I build production-grade applications across Node.js, Python, React, and React Native with emphasis on reliability and performance.
             </p>
             </ScrollAnimation>
 

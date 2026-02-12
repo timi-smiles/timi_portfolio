@@ -18,7 +18,7 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "projects", "about", "contact"]
+      const sections = ["home", "experience", "projects", "about", "contact"]
       const scrollPosition = window.scrollY + window.innerHeight / 2
 
       // Check if we're at the bottom of the page (contact section)
@@ -58,16 +58,16 @@ export function Navigation() {
   }
 
   const navItems = [
+    { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "about", label: "About" },
-    // { id: "experience", label: "Experience" },
     { id: "contact", label: "Contact" },
   ]
 
   const handleResumeDownload = () => {
     // Create a temporary link to trigger download
     const link = document.createElement('a')
-    link.href = '/TIMILEHIN_OGUNS_RESUME.pdf' 
+    link.href = '/TIMILEHIN_OGUNNOWO_RESUME.pdf' 
     link.download = 'Timilehin_Ogunnowo_Resume.pdf'
     document.body.appendChild(link)
     link.click()
